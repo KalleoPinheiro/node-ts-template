@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker: Attach to Node",
+      "port": 9229,
+      "restart": true,
+      "remoteRoot": "/usr/app/src/node-ts-template",
+      "localRoot": "/home/blessed/Projects/boilerplates/node-ts-template"
+    }
+  ]
+}
