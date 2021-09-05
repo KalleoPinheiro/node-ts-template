@@ -2,16 +2,16 @@
   "name": "node-ts-template",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:KalleoPinheiro/node-ts-template.git",
+  "repository": "git@github-personal:KalleoPinheiro/node-ts-template.git",
   "author": "Kalléo Pinheiro <kalleopinheiro@hotmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -b",
     "build:watch": "rimraf dist && tsc -w",
     "start": "node ./dist/src/main/server.js",
+    "debug": "forever -d -w -c 'node --inspect=0.0.0.0:9229' ./dist/src/main/server.js",
     "up": "npm run build && docker-compose up",
-    "down": "docker-compose down",
-    "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9229 --nolazy ./dist/src/main/server.js"
+    "down": "docker-compose down"
   },
   "engines": {
     "node": "16.x"
@@ -31,7 +31,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.4.2"

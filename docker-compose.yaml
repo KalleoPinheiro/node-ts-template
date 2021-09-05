@@ -5,7 +5,7 @@ services:
     image: node:16
     working_dir: /usr/app/src/node-ts-template
     restart: always
-    command: bash -c "npm i nodemon -g; npm install --only=prod; npm run debug"
+    command: bash -c "npm i forever -g; npm install --only=prod; npm run debug"
     volumes:
       - ./dist/:/usr/app/src/node-ts-template/dist/
       - ./package.json:/usr/app/src/node-ts-template/package.json
