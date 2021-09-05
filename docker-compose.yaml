@@ -5,7 +5,7 @@ services:
     image: node:16
     working_dir: /usr/app/src/node-ts-template
     restart: always
-    command: bash -c "yarn global add forever; yarn install --prod; yarnn debug"
+    command: bash -c "yarn global add forever; yarn install --prod; yarn debug"
     volumes:
       - ./dist/:/usr/app/src/node-ts-template/dist/
       - ./package.json:/usr/app/src/node-ts-template/package.json
